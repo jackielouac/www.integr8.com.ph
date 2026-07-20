@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
 
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0"
-  />
+  >
 
-  <meta name="theme-color" content="#fff8ed" />
+  <meta name="theme-color" content="#fff8ed">
 
   <title>Happy Birthday, Ma'am Judd! - Sales 2026</title>
 
   <style>
     :root {
       --gold: #b78637;
-      --gold-dark: #8b5d1d;
+      --gold-dark: #8e601f;
       --gold-light: #f4d79d;
       --cream: #fffaf2;
       --text: #322a22;
       --muted: #75695c;
-      --glass: rgba(255, 255, 255, 0.72);
-      --border: rgba(183, 134, 55, 0.26);
-      --shadow: rgba(86, 61, 28, 0.16);
+      --glass: rgba(255, 255, 255, 0.74);
+      --border: rgba(183, 134, 55, 0.28);
     }
 
     * {
@@ -39,21 +38,22 @@
       min-height: 100vh;
       font-family: Inter, Arial, sans-serif;
       color: var(--text);
+
       background:
         radial-gradient(
           circle at 15% 15%,
-          rgba(244, 215, 157, 0.55),
+          rgba(244, 215, 157, 0.58),
           transparent 30%
         ),
         radial-gradient(
           circle at 85% 20%,
-          rgba(255, 255, 255, 0.95),
-          transparent 25%
+          rgba(255, 255, 255, 0.96),
+          transparent 27%
         ),
         radial-gradient(
           circle at 50% 100%,
-          rgba(183, 134, 55, 0.18),
-          transparent 35%
+          rgba(183, 134, 55, 0.2),
+          transparent 38%
         ),
         linear-gradient(
           135deg,
@@ -63,7 +63,7 @@
         );
 
       background-size: 150% 150%;
-      animation: backgroundMove 14s ease-in-out infinite alternate;
+      animation: backgroundMove 13s ease-in-out infinite alternate;
       overflow-x: hidden;
     }
 
@@ -77,13 +77,11 @@
       }
     }
 
-    /* BACKGROUND SPARKLES */
-
     .sparkle {
       position: fixed;
       inset: 0;
       pointer-events: none;
-      opacity: 0.28;
+      opacity: 0.25;
       z-index: 0;
 
       background-image:
@@ -94,21 +92,6 @@
         );
 
       background-size: 44px 44px;
-
-      -webkit-mask-image:
-        linear-gradient(
-          to bottom,
-          black,
-          transparent 80%
-        );
-
-      mask-image:
-        linear-gradient(
-          to bottom,
-          black,
-          transparent 80%
-        );
-
       animation: sparkleMove 18s linear infinite;
     }
 
@@ -122,51 +105,48 @@
       }
     }
 
-    /* FLOATING DECORATIONS */
-
     .floating-decoration {
       position: fixed;
       z-index: 1;
       pointer-events: none;
-      user-select: none;
-      opacity: 0.72;
+      opacity: 0.7;
       filter: drop-shadow(
-        0 10px 18px rgba(183, 134, 55, 0.18)
+        0 10px 18px rgba(183, 134, 55, 0.2)
       );
     }
 
     .decoration-one {
-      top: 11%;
+      top: 10%;
       left: 4%;
-      font-size: clamp(2rem, 5vw, 4.5rem);
-      animation: floatingOne 6s ease-in-out infinite;
+      font-size: clamp(2rem, 5vw, 4.4rem);
+      animation: floatOne 6s ease-in-out infinite;
     }
 
     .decoration-two {
-      top: 16%;
+      top: 15%;
       right: 5%;
-      font-size: clamp(1.8rem, 4vw, 3.8rem);
-      animation: floatingTwo 7s ease-in-out infinite;
+      font-size: clamp(2rem, 5vw, 4rem);
+      animation: floatTwo 7s ease-in-out infinite;
     }
 
     .decoration-three {
       bottom: 10%;
-      left: 7%;
-      font-size: clamp(1.8rem, 4vw, 3.5rem);
-      animation: floatingTwo 8s ease-in-out infinite reverse;
+      left: 6%;
+      font-size: clamp(2rem, 5vw, 4rem);
+      animation: floatTwo 8s ease-in-out infinite reverse;
     }
 
     .decoration-four {
-      bottom: 9%;
-      right: 7%;
-      font-size: clamp(2rem, 4vw, 3.8rem);
-      animation: floatingOne 7.5s ease-in-out infinite reverse;
+      bottom: 10%;
+      right: 6%;
+      font-size: clamp(2rem, 5vw, 4rem);
+      animation: floatOne 7s ease-in-out infinite reverse;
     }
 
-    @keyframes floatingOne {
+    @keyframes floatOne {
       0%,
       100% {
-        transform: translateY(0) rotate(-5deg);
+        transform: translateY(0) rotate(-4deg);
       }
 
       50% {
@@ -174,18 +154,16 @@
       }
     }
 
-    @keyframes floatingTwo {
+    @keyframes floatTwo {
       0%,
       100% {
-        transform: translateY(0) rotate(4deg);
+        transform: translateY(0) rotate(5deg);
       }
 
       50% {
-        transform: translateY(16px) rotate(-7deg);
+        transform: translateY(17px) rotate(-6deg);
       }
     }
-
-    /* PAGE */
 
     .page {
       position: relative;
@@ -193,71 +171,71 @@
       min-height: 100vh;
       display: grid;
       place-items: center;
-      padding: 34px 18px;
+      padding: 32px 18px;
     }
-
-    /* MAIN CARD */
 
     .card {
       position: relative;
       width: min(960px, 100%);
+      padding: clamp(25px, 5vw, 52px);
+      text-align: center;
+      overflow: hidden;
+
       border: 1px solid var(--border);
+      border-radius: 34px;
+
       background: var(--glass);
 
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
 
-      border-radius: 34px;
-      padding: clamp(24px, 5vw, 52px);
-
       box-shadow:
-        0 28px 80px rgba(86, 61, 28, 0.16),
-        inset 0 1px 0 rgba(255, 255, 255, 0.88);
+        0 28px 80px rgba(86, 61, 28, 0.17),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
 
-      text-align: center;
-      overflow: hidden;
-
-      animation: cardEntrance 1.15s
-        cubic-bezier(0.22, 1, 0.36, 1) both;
+      animation:
+        cardEntrance 1.1s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        both;
     }
 
     .card::before {
       content: "";
       position: absolute;
-      width: 360px;
-      height: 360px;
-      top: -230px;
-      left: -150px;
+      width: 370px;
+      height: 370px;
+      top: -240px;
+      left: -160px;
       border-radius: 50%;
 
       background:
         radial-gradient(
           circle,
-          rgba(244, 215, 157, 0.55),
+          rgba(244, 215, 157, 0.62),
           transparent 70%
         );
 
-      animation: glowFloat 9s ease-in-out infinite;
+      animation: glowMove 9s ease-in-out infinite;
       pointer-events: none;
     }
 
     .card::after {
       content: "";
       position: absolute;
-      width: 300px;
-      height: 300px;
-      right: -170px;
-      bottom: -190px;
+      width: 320px;
+      height: 320px;
+      right: -180px;
+      bottom: -200px;
       border-radius: 50%;
 
       background:
         radial-gradient(
           circle,
-          rgba(183, 134, 55, 0.22),
+          rgba(183, 134, 55, 0.25),
           transparent 70%
         );
 
-      animation: glowFloat 10s ease-in-out infinite reverse;
+      animation: glowMove 10s ease-in-out infinite reverse;
       pointer-events: none;
     }
 
@@ -279,7 +257,7 @@
       }
     }
 
-    @keyframes glowFloat {
+    @keyframes glowMove {
       0%,
       100% {
         transform: translate(0, 0);
@@ -296,20 +274,22 @@
       z-index: 2;
     }
 
-    /* EYEBROW */
+    #birthdayContent {
+      display: none;
+    }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
+      gap: 9px;
 
       color: var(--gold);
       font-weight: 800;
       letter-spacing: 0.18em;
       text-transform: uppercase;
       font-size: 0.78rem;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
 
       animation: fadeDown 0.9s ease both;
     }
@@ -341,18 +321,14 @@
       }
     }
 
-    /* HEADLINE */
-
     h1 {
       font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-      font-size:
-        clamp(2.4rem, 7vw, 5.5rem);
-
-      line-height: 1.02;
+      font-size: clamp(2.5rem, 7vw, 5.5rem);
+      line-height: 1.05;
       font-weight: 700;
       letter-spacing: -0.03em;
     }
@@ -360,6 +336,9 @@
     .headline-word {
       display: inline-block;
       opacity: 0;
+      transform:
+        translateY(28px)
+        scale(0.72);
 
       animation:
         wordPop 0.9s
@@ -367,33 +346,128 @@
         forwards;
     }
 
-    .headline-word:nth-child(1) {
-      animation-delay: 0.15s;
+    .word-1 {
+      animation-delay: 0.12s;
     }
 
-    .headline-word:nth-child(2) {
-      animation-delay: 0.32s;
+    .word-2 {
+      animation-delay: 0.34s;
     }
 
-    .headline-word:nth-child(3) {
-      animation-delay: 0.5s;
+    .word-3 {
+      animation-delay: 0.56s;
+    }
+
+    .word-4 {
+      animation-delay: 0.78s;
     }
 
     @keyframes wordPop {
       0% {
         opacity: 0;
         transform:
-          translateY(25px)
-          scale(0.75)
-          rotate(-2deg);
+          translateY(30px)
+          scale(0.72)
+          rotate(-3deg);
+      }
+
+      65% {
+        opacity: 1;
+        transform:
+          translateY(-7px)
+          scale(1.06)
+          rotate(1deg);
+      }
+
+      100% {
+        opacity: 1;
+        transform:
+          translateY(0)
+          scale(1)
+          rotate(0);
+      }
+    }
+
+    .gold-text {
+      color: var(--gold);
+
+      background:
+        linear-gradient(
+          100deg,
+          #8e5e1d 8%,
+          #d7ab62 30%,
+          #fff1c8 48%,
+          #c58e3c 68%,
+          #8d5d1d 92%
+        );
+
+      background-size: 230% auto;
+
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .gold-moving {
+      animation:
+        wordPop 0.9s
+        cubic-bezier(0.18, 0.89, 0.32, 1.35)
+        forwards,
+        goldShimmer 4.2s linear 1.4s infinite;
+    }
+
+    .word-2.gold-moving {
+      animation-delay: 0.34s, 1.4s;
+    }
+
+    .word-3.gold-moving {
+      animation-delay: 0.56s, 1.4s;
+    }
+
+    .word-4.gold-moving {
+      animation-delay: 0.78s, 1.4s;
+    }
+
+    @keyframes goldShimmer {
+      from {
+        background-position: 220% center;
+      }
+
+      to {
+        background-position: -220% center;
+      }
+    }
+
+    .birthday-subtitle {
+      margin-top: 14px;
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+      font-size: clamp(1.2rem, 3vw, 2rem);
+      font-weight: 700;
+      color: var(--gold-dark);
+      opacity: 0;
+
+      animation:
+        subtitlePop 0.9s
+        cubic-bezier(0.18, 0.89, 0.32, 1.3)
+        0.95s forwards;
+    }
+
+    @keyframes subtitlePop {
+      0% {
+        opacity: 0;
+        transform:
+          translateY(18px)
+          scale(0.8);
       }
 
       70% {
         opacity: 1;
         transform:
-          translateY(-5px)
-          scale(1.05)
-          rotate(0);
+          translateY(-4px)
+          scale(1.05);
       }
 
       100% {
@@ -404,56 +478,24 @@
       }
     }
 
-    /* GOLD SHIMMER */
-
-    .gold {
-      color: var(--gold);
-
-      background:
-        linear-gradient(
-          100deg,
-          #9b6822 10%,
-          #dcb66f 35%,
-          #fff0c7 50%,
-          #c89543 66%,
-          #93611f 90%
-        );
-
-      background-size: 220% auto;
-
-      -webkit-background-clip: text;
-      background-clip: text;
-
-      -webkit-text-fill-color: transparent;
-
-      animation: goldShimmer 4.2s linear infinite;
-    }
-
-    @keyframes goldShimmer {
-      to {
-        background-position: -220% center;
-      }
-    }
-
-    /* MESSAGE */
-
     .message {
-      max-width: 720px;
-      margin: 22px auto 0;
+      max-width: 735px;
+      margin: 23px auto 0;
 
-      font-size:
-        clamp(1rem, 2vw, 1.2rem);
-
+      font-size: clamp(1rem, 2vw, 1.2rem);
       line-height: 1.8;
       color: var(--muted);
 
-      animation: messageReveal 1s ease 0.65s both;
+      opacity: 0;
+
+      animation:
+        messageReveal 1s ease 0.75s forwards;
     }
 
     @keyframes messageReveal {
       from {
         opacity: 0;
-        transform: translateY(16px);
+        transform: translateY(18px);
       }
 
       to {
@@ -462,29 +504,27 @@
       }
     }
 
-    /* COUNTDOWN */
-
     .countdown {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 10px;
       max-width: 520px;
-      margin: 26px auto 0;
+      margin: 28px auto 0;
 
-      animation: messageReveal 1s ease 0.82s both;
+      opacity: 0;
+
+      animation:
+        messageReveal 1s ease 0.92s forwards;
     }
 
     .time-box {
       position: relative;
       overflow: hidden;
-      border-radius: 18px;
       padding: 15px 8px;
+      border-radius: 18px;
 
-      background:
-        rgba(255, 255, 255, 0.7);
-
-      border:
-        1px solid var(--border);
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid var(--border);
 
       box-shadow:
         0 9px 24px rgba(86, 61, 28, 0.08);
@@ -496,8 +536,9 @@
 
     .time-box:hover {
       transform: translateY(-5px);
+
       box-shadow:
-        0 14px 30px rgba(86, 61, 28, 0.15);
+        0 15px 30px rgba(86, 61, 28, 0.15);
     }
 
     .time-box::after {
@@ -512,7 +553,7 @@
         linear-gradient(
           90deg,
           transparent,
-          rgba(255, 255, 255, 0.8),
+          rgba(255, 255, 255, 0.85),
           transparent
         );
 
@@ -533,24 +574,8 @@
 
     .time-box strong {
       display: block;
-
-      font-size:
-        clamp(1.3rem, 4vw, 2rem);
-
+      font-size: clamp(1.3rem, 4vw, 2rem);
       color: var(--gold);
-
-      animation: countdownPulse 1s ease-in-out infinite;
-    }
-
-    @keyframes countdownPulse {
-      0%,
-      100% {
-        transform: scale(1);
-      }
-
-      50% {
-        transform: scale(1.035);
-      }
     }
 
     .time-box span {
@@ -560,25 +585,22 @@
       letter-spacing: 0.08em;
     }
 
-    /* LOCK BOX */
-
     .lock-box {
       max-width: 520px;
       margin: 32px auto 0;
       padding: 24px;
-
       border-radius: 24px;
 
-      background:
-        rgba(255, 255, 255, 0.65);
-
-      border:
-        1px solid var(--border);
+      background: rgba(255, 255, 255, 0.67);
+      border: 1px solid var(--border);
 
       box-shadow:
         0 14px 35px rgba(86, 61, 28, 0.09);
 
-      animation: messageReveal 1s ease 1s both;
+      opacity: 0;
+
+      animation:
+        messageReveal 1s ease 1.08s forwards;
     }
 
     .lock-icon {
@@ -587,8 +609,8 @@
       display: grid;
       place-items: center;
       margin: 0 auto 14px;
-
       border-radius: 20px;
+      font-size: 1.7rem;
 
       background:
         linear-gradient(
@@ -599,8 +621,6 @@
 
       box-shadow:
         0 10px 25px rgba(183, 134, 55, 0.2);
-
-      font-size: 1.7rem;
 
       animation: lockFloat 3s ease-in-out infinite;
     }
@@ -618,22 +638,17 @@
 
     input {
       width: 100%;
+      margin-top: 14px;
+      padding: 15px 16px;
 
       border:
         1px solid rgba(79, 61, 39, 0.18);
 
-      background:
-        rgba(255, 255, 255, 0.92);
-
-      color: var(--text);
       border-radius: 16px;
-      padding: 15px 16px;
+      background: rgba(255, 255, 255, 0.94);
+      color: var(--text);
       font-size: 1rem;
       outline: none;
-      margin-top: 14px;
-
-      box-shadow:
-        inset 0 2px 7px rgba(86, 61, 28, 0.05);
 
       transition:
         border-color 0.25s ease,
@@ -653,15 +668,17 @@
     button {
       position: relative;
       width: 100%;
-      overflow: hidden;
-      border: 0;
-      border-radius: 16px;
       margin-top: 12px;
       padding: 15px 18px;
+      overflow: hidden;
+
+      border: 0;
+      border-radius: 16px;
       cursor: pointer;
+
+      color: white;
       font-size: 1rem;
       font-weight: 800;
-      color: white;
 
       background:
         linear-gradient(
@@ -671,8 +688,7 @@
         );
 
       box-shadow:
-        0 12px 28px
-        rgba(183, 134, 55, 0.28);
+        0 12px 28px rgba(183, 134, 55, 0.28);
 
       transition:
         transform 0.2s ease,
@@ -703,8 +719,7 @@
       transform: translateY(-3px);
 
       box-shadow:
-        0 17px 35px
-        rgba(183, 134, 55, 0.34);
+        0 17px 35px rgba(183, 134, 55, 0.35);
     }
 
     button:hover::after {
@@ -718,9 +733,15 @@
     .status {
       min-height: 24px;
       margin-top: 13px;
-      font-size: 0.92rem;
       color: #9b3c2f;
+      font-size: 0.92rem;
       font-weight: 600;
+    }
+
+    .date-note {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 0.9rem;
     }
 
     .shake {
@@ -746,25 +767,11 @@
       }
     }
 
-    .date-note {
-      margin-top: 20px;
-      color: var(--muted);
-      font-size: 0.9rem;
-
-      animation: messageReveal 1s ease 1.12s both;
-    }
-
-    /* BIRTHDAY CONTENT */
-
-    #birthdayContent {
-      display: none;
-    }
-
     .birthday-reveal {
       display: block !important;
 
       animation:
-        birthdayReveal 1.15s
+        birthdayReveal 1.1s
         cubic-bezier(0.22, 1, 0.36, 1)
         both;
     }
@@ -773,9 +780,9 @@
       from {
         opacity: 0;
         transform:
-          scale(0.92)
+          scale(0.93)
           translateY(30px);
-        filter: blur(10px);
+        filter: blur(9px);
       }
 
       to {
@@ -787,24 +794,22 @@
       }
     }
 
-    /* VIDEO */
-
     .video-wrap {
       position: relative;
       margin-top: 30px;
       padding: 10px;
-      background: white;
       border-radius: 26px;
 
-      border:
-        1px solid var(--border);
+      background: white;
+      border: 1px solid var(--border);
 
       box-shadow:
-        0 18px 55px
-        rgba(86, 61, 28, 0.16);
+        0 18px 55px rgba(86, 61, 28, 0.17);
+
+      opacity: 0;
 
       animation:
-        videoReveal 1s ease 0.55s both;
+        videoReveal 1s ease 1.1s forwards;
     }
 
     .video-wrap::before {
@@ -818,15 +823,13 @@
         linear-gradient(
           120deg,
           transparent,
-          rgba(244, 215, 157, 0.9),
-          rgba(183, 134, 55, 0.45),
+          rgba(244, 215, 157, 0.95),
+          rgba(183, 134, 55, 0.5),
           transparent
         );
 
       background-size: 250% 250%;
-
-      animation:
-        videoBorderGlow 5s linear infinite;
+      animation: videoGlow 5s linear infinite;
     }
 
     @keyframes videoReveal {
@@ -845,12 +848,12 @@
       }
     }
 
-    @keyframes videoBorderGlow {
-      0% {
+    @keyframes videoGlow {
+      from {
         background-position: 0% 50%;
       }
 
-      100% {
+      to {
         background-position: 250% 50%;
       }
     }
@@ -859,7 +862,6 @@
       display: block;
       width: 100%;
       max-height: 72vh;
-
       border-radius: 19px;
       background: #1c1813;
     }
@@ -872,31 +874,15 @@
         "Times New Roman",
         serif;
 
-      font-size:
-        clamp(1.25rem, 3vw, 1.8rem);
-
+      font-size: clamp(1.25rem, 3vw, 1.8rem);
       color: var(--gold);
 
+      opacity: 0;
+
       animation:
-        closingPop 1s
+        subtitlePop 1s
         cubic-bezier(0.18, 0.89, 0.32, 1.3)
-        0.9s both;
-    }
-
-    @keyframes closingPop {
-      from {
-        opacity: 0;
-        transform:
-          translateY(20px)
-          scale(0.8);
-      }
-
-      to {
-        opacity: 1;
-        transform:
-          translateY(0)
-          scale(1);
-      }
+        1.35s forwards;
     }
 
     .small {
@@ -905,14 +891,12 @@
       font-size: 0.9rem;
     }
 
-    /* CONFETTI */
-
     .confetti {
       position: fixed;
       top: -20px;
+      z-index: 9999;
       width: 10px;
       height: 18px;
-      z-index: 9999;
       pointer-events: none;
 
       animation:
@@ -922,7 +906,7 @@
     }
 
     @keyframes confettiFall {
-      0% {
+      from {
         opacity: 1;
 
         transform:
@@ -930,7 +914,7 @@
           rotate(0deg);
       }
 
-      100% {
+      to {
         opacity: 0.9;
 
         transform:
@@ -943,16 +927,14 @@
       }
     }
 
-    /* MOBILE */
-
     @media (max-width: 600px) {
       .page {
         padding: 20px 12px;
       }
 
       .card {
+        padding: 27px 17px;
         border-radius: 25px;
-        padding: 28px 18px;
       }
 
       .countdown {
@@ -960,8 +942,8 @@
       }
 
       .time-box {
-        border-radius: 14px;
         padding: 12px 4px;
+        border-radius: 14px;
       }
 
       .lock-box {
@@ -969,21 +951,14 @@
       }
 
       .floating-decoration {
-        opacity: 0.4;
+        opacity: 0.38;
       }
 
-      .decoration-one,
-      .decoration-three {
-        left: 1%;
-      }
-
-      .decoration-two,
-      .decoration-four {
-        right: 1%;
+      .eyebrow {
+        letter-spacing: 0.12em;
+        font-size: 0.7rem;
       }
     }
-
-    /* ACCESSIBILITY */
 
     @media (prefers-reduced-motion: reduce) {
       *,
@@ -991,7 +966,6 @@
       *::after {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
-        scroll-behavior: auto !important;
       }
     }
   </style>
@@ -1028,13 +1002,19 @@
         </p>
 
         <h1>
-          <span class="headline-word">For</span>
+          <span class="headline-word word-1">
+            For
+          </span>
 
-          <span class="headline-word gold">
+          <span
+            class="headline-word word-2 gold-text gold-moving"
+          >
             Ma'am
           </span>
 
-          <span class="headline-word gold">
+          <span
+            class="headline-word word-3 gold-text gold-moving"
+          >
             Judd
           </span>
         </h1>
@@ -1042,12 +1022,10 @@
         <p class="message">
           A heartfelt birthday surprise prepared especially
           for an inspiring mentor and a wonderful person.
-
           Wishing you a day filled with joy, laughter, and
-          all the happiness you truly deserve.
-
-          We cannot wait for you to open this little surprise
-          on July 23, 2026. Happy Birthday, Ma'am! 💙
+          all the happiness you truly deserve. We cannot wait
+          for you to open this little surprise on
+          July 23, 2026. Happy Birthday, Ma'am! 💙
         </p>
 
         <div
@@ -1083,7 +1061,7 @@
 
           <p>
             <strong>
-              Enter the gr8 password to open the birthday greeting.
+              Enter the password to open the birthday greeting.
             </strong>
           </p>
 
@@ -1092,13 +1070,13 @@
             type="password"
             placeholder="Enter password"
             autocomplete="off"
-          />
+          >
 
           <button
             id="unlockBtn"
             type="button"
           >
-           See the Video Greeting▶️
+            Open Birthday Surprise ✨
           </button>
 
           <p
@@ -1115,7 +1093,7 @@
 
       </div>
 
-      <!-- UNLOCKED BIRTHDAY PAGE -->
+      <!-- BIRTHDAY PAGE AFTER PASSWORD -->
 
       <div id="birthdayContent">
 
@@ -1124,29 +1102,33 @@
         </p>
 
         <h1>
-          <span class="headline-word">
+          <span class="headline-word word-1">
             Happy
           </span>
 
-          <span class="headline-word">
+          <span class="headline-word word-2">
             Birthday,
           </span>
 
-          <span class="headline-word gold">
-            Ma'am Judd! Our No. 1!
+          <span
+            class="headline-word word-3 gold-text gold-moving"
+          >
+            Ma'am Judd!
           </span>
         </h1>
+
+        <p class="birthday-subtitle">
+          Our No. 1! 🏆
+        </p>
 
         <p class="message">
           Wishing you a birthday filled with happiness,
           love, and all the blessings you truly deserve.
-
           Thank you for your guidance, patience, and for
-          inspiring the people around you to keep growing.
-
-          May this new chapter bring you more success,
-          good health, and beautiful moments with the
-          people you love.
+          always inspiring the people around you to keep
+          growing. May this new chapter bring you even more
+          success, good health, meaningful moments, and
+          beautiful memories with the people you love.
         </p>
 
         <div class="video-wrap">
@@ -1159,9 +1141,9 @@
             poster="birthday-cover.jpg"
           >
             <source
-              src="birthday-video.mp4"
+              src="birthday-video.mp4.mp4"
               type="video/mp4"
-            />
+            >
 
             Your browser does not support HTML5 video.
           </video>
@@ -1185,19 +1167,25 @@
 
   <script>
     /*
-      CHANGE THE PASSWORD HERE.
+      TRUE = You can preview it today.
+      FALSE = It will only open on July 23, 2026.
+    */
+
+    const PREVIEW_MODE = true;
+
+    /*
+      PASSWORD
     */
 
     const PAGE_PASSWORD = "fromsales2026";
 
     /*
-      PAGE OPENING DATE:
-      July 23, 2026 at 12:00 AM
-      Philippine Time, UTC+8.
+      JULY 23, 2026 — 12:00 AM
+      PHILIPPINE TIME
     */
 
     const OPEN_DATE =
-      new Date("2026-07-20T00:00:00+08:00");
+      new Date("2026-07-23T00:00:00+08:00");
 
     const lockedContent =
       document.getElementById("lockedContent");
@@ -1219,10 +1207,6 @@
 
     const birthdayVideo =
       document.getElementById("birthdayVideo");
-
-    /*
-      COUNTDOWN
-    */
 
     function updateCountdown() {
       const now = new Date();
@@ -1265,10 +1249,6 @@
         String(seconds).padStart(2, "0");
     }
 
-    /*
-      ERROR ANIMATION
-    */
-
     function showError(message) {
       statusText.textContent = message;
 
@@ -1278,10 +1258,6 @@
 
       lockBox.classList.add("shake");
     }
-
-    /*
-      CONFETTI
-    */
 
     function createConfetti() {
       const colors = [
@@ -1293,7 +1269,11 @@
         "#5c8fd8"
       ];
 
-      for (let index = 0; index < 120; index++) {
+      for (
+        let index = 0;
+        index < 130;
+        index++
+      ) {
         const piece =
           document.createElement("span");
 
@@ -1316,7 +1296,7 @@
 
         piece.style.setProperty(
           "--drift",
-          -120 + Math.random() * 240 + "px"
+          -130 + Math.random() * 260 + "px"
         );
 
         piece.style.animationDelay =
@@ -1331,18 +1311,17 @@
 
         setTimeout(() => {
           piece.remove();
-        }, 7500);
+        }, 7600);
       }
     }
-
-    /*
-      UNLOCK PAGE
-    */
 
     function unlockPage() {
       const now = new Date();
 
-      if (now < OPEN_DATE) {
+      if (
+        !PREVIEW_MODE &&
+        now < OPEN_DATE
+      ) {
         showError(
           "This birthday surprise will open on July 23, 2026."
         );
@@ -1373,15 +1352,9 @@
 
       createConfetti();
 
-      /*
-        Attempts to play after unlocking.
-        Some browsers may still require
-        pressing the video play button.
-      */
-
       birthdayVideo.play().catch(() => {
         console.log(
-          "Autoplay was blocked by the browser."
+          "Press the play button to start the video."
         );
       });
     }
@@ -1393,7 +1366,7 @@
 
     passwordInput.addEventListener(
       "keydown",
-      function (event) {
+      function(event) {
         if (event.key === "Enter") {
           unlockPage();
         }
